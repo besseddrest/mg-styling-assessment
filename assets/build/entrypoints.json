@@ -2,11 +2,11 @@
   "entrypoints": {
     "app": {
       "js": [
-        "assets/build/runtime.js",
-        "assets/build/app.js"
+        "http://localhost:8080/assets/build/runtime.js",
+        "http://localhost:8080/assets/build/app.js"
       ],
       "css": [
-        "assets/build/app.css"
+        "http://localhost:8080/assets/build/app.css"
       ]
     }
   }

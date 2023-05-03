@@ -10,7 +10,7 @@ Encore
     // directory where compiled assets will be stored
     .setOutputPath('assets/build/')
     // public path used by the web server to access the output path
-    .setPublicPath('assets/build/')
+    .setPublicPath('/assets/build')
     // only needed for CDN's or sub-directory deploy
     // .setManifestKeyPrefix('build/')
 
@@ -43,7 +43,7 @@ Encore
      */
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
-    .enableSourceMaps(!Encore.isProduction())
+    // .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     // .enableVersioning(Encore.isProduction())
 
