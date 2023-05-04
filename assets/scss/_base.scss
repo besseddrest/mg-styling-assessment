@@ -6,7 +6,8 @@
   padding: 25px 70px;
 }
 
-[class*="__article"] {
+// not a typical horizontal `card`, but very `card-ish`
+[class*="__card"] {
   h2 {
     color: black;
     font-family: 'Ovo', Georgia, 'Times New Roman', Times, serif;
