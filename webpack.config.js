@@ -43,7 +43,7 @@ Encore
      */
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
-    // .enableSourceMaps(!Encore.isProduction())
+    .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     // .enableVersioning(Encore.isProduction())
 

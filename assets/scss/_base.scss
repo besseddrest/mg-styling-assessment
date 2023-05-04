@@ -1,6 +1,65 @@
 // begin styling here.
+.content {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  max-width: 1366px;
+  width: 100%;
+  padding: 25px 70px;
+}
 
+[class*="__article"] {
+  h2 {
+    color: black;
+    font-family: 'Ovo', Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    line-height: 39px;
+    letter-spacing: -0.36px;
+  }
+  
+  p {
+    color: #303239;
+    letter-spacing: 0px;
+    font-size: 22px;
+    line-height: 34px;
+  }
+  
+  button {
+    padding: 8px 40px;
+    font-size: 16px;
+    border-radius: 0;
+    min-height: 51px;
+    letter-spacing: -0.32px;
+  }
+}
 
+.animal {
+  width: 100%;
+  flex-direction: row-reverse;
+
+  > * {
+    flex: 1 1 auto;
+  }
+
+  &__image {
+    width: 631px;
+    height: 514px;
+    background: transparent url('/assets/images/cat.jpg') center/140% no-repeat;
+    z-index: 1;
+  }
+
+  &__body {
+    width: 653px;
+    height: 556px;
+    margin: 50px 0 0 -50px;
+    padding: 65px 85px;
+    background: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.16);
+    z-index: 2;
+
+    h2, p {
+      margin-bottom: 25px;
+    }
+  }
+}
 
 // < 576px, but we don't use this one because build things mobile first, right?!
 @include media-breakpoint-down(xs) {}
