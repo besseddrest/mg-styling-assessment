@@ -3,16 +3,17 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   max-width: 1366px;
   width: 100%;
-  padding: 25px clamp(1rem, -5rem + 12.5vw, 70px); // ToDo
+  padding: 25px 1rem;
 }
 
 // not a typical horizontal `card`, but very `card-ish`
+// assuming there can be different cards... e.g. `human__card`, `robot__card`
 [class*="__card"] {
   h2 {
     color: black;
     font-family: 'Ovo', Georgia, 'Times New Roman', Times, serif;
-    font-size: 36px;
-    line-height: 39px;
+    font-size: 30px;
+    line-height: 33px;
     letter-spacing: -0.36px;
   }
   
@@ -35,18 +36,16 @@
 .animal {
   flex-direction: column-reverse;
 
-  > * {
-    flex: 1;
-  }
-
   &__media {
-    flex-basis: 300px;
+    flex: 1 1 auto;
+    height: clamp(290px, $animal-image-height-mobile, 440px);
     background: transparent url('/assets/images/cat.jpg') center no-repeat;
     background-size: cover;
     z-index: 1;
   }
 
   &__body {
+    flex: 1 1 auto;
     padding: 1rem;
     background: white;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.16);
@@ -66,7 +65,16 @@
 
 // ≥768px "tablet"
 @include media-breakpoint-up(md) {
+  .content {
+    padding: 25px clamp(16px, $gutter-padding, 70px)
+  }
+
   [class*="__card"] {
+    h2 {
+      font-size: 36px;
+      line-height: 39px;
+    }
+
     p {
       font-size: clamp(16px, $font-size-clamp, 22px);
       line-height: clamp(24px, $line-height-clamp, 34px);
@@ -76,26 +84,23 @@
   .animal {
     flex-direction: row-reverse;
 
-    > * {
-      flex-basis: 50%;
-    }
-
     &__media {
-      min-width: 320px;
-      min-height: 514px;
-      width: 631px;
-      height: 514px;
+      flex-basis: 631px;
+      min-height: none;
+      height: clamp(440px, $animal-image-height-up, 515px);
       background: transparent url('/assets/images/cat.jpg') center/140% no-repeat;
     }
 
     &__body {
+      flex-basis: 653px;
+      width: 100%;
+      max-height: 556px;
+      margin: 57px 0 0 -57px;
       padding: 
         clamp(3rem, $body-top-padding, 65px)
         clamp(1rem, $body-right-padding, 65px)
-        clamp(1rem, $body-bottom-padding, 50px)
+        clamp(2rem, $body-bottom-padding, 50px)
         clamp(2rem, $body-left-padding, 85px);
-      width: 100%;
-      margin: 57px 0 0 -57px;
     }
 
     button {
@@ -104,18 +109,14 @@
   }
 }
 
-// ≥992px Harold's mid 2012 13" Macbook Air aka "Ol' Reliable"
-@include media-breakpoint-up(lg) {}
+// ≥992px "laptop"
+@include media-breakpoint-up(lg) {
+  
+}
 
 // ≥1200px "desktop"
 @include media-breakpoint-up(xl) {
 }
 
 // ≥1400px "large desktop"
-@include media-breakpoint-up(xxl) {
-  .animal {
-    &__body {
-      max-height: 556px;
-    }
-  }
-}
+@include media-breakpoint-up(xxl) {}
