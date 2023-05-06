@@ -3,7 +3,7 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   max-width: 1366px;
   width: 100%;
-  padding: 25px 70px;
+  padding: 25px clamp(1rem, -5rem + 12.5vw, 70px); // ToDo
 }
 
 // not a typical horizontal `card`, but very `card-ish`
@@ -18,46 +18,42 @@
   
   p {
     color: #303239;
-    letter-spacing: 0px;
-    font-size: 22px;
-    line-height: 34px;
+    font-size: 16px;
+    line-height: 24px;
   }
   
   button {
+    width: 100%;
+    min-height: 51px;
     padding: 8px 40px;
     font-size: 16px;
     border-radius: 0;
-    min-height: 51px;
     letter-spacing: -0.32px;
   }
 }
 
 .animal {
-  width: 100%;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
 
   > * {
-    flex: 1 1 auto;
+    flex: 1;
   }
 
-  &__image {
-    width: 631px;
-    height: 514px;
-    background: transparent url('/assets/images/cat.jpg') center/140% no-repeat;
+  &__media {
+    flex-basis: 300px;
+    background: transparent url('/assets/images/cat.jpg') center no-repeat;
+    background-size: cover;
     z-index: 1;
   }
 
   &__body {
-    width: 653px;
-    height: 556px;
-    margin: 50px 0 0 -50px;
-    padding: 65px 85px;
+    padding: 1rem;
     background: white;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.16);
     z-index: 2;
 
     h2, p {
-      margin-bottom: 25px;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -68,14 +64,58 @@
 // ≥576px
 @include media-breakpoint-up(sm) {}
 
-// ≥768px
-@include media-breakpoint-up(md) {}
+// ≥768px "tablet"
+@include media-breakpoint-up(md) {
+  [class*="__card"] {
+    p {
+      font-size: clamp(16px, $font-size-clamp, 22px);
+      line-height: clamp(24px, $line-height-clamp, 34px);
+    }
+  }
 
-// ≥992px
+  .animal {
+    flex-direction: row-reverse;
+
+    > * {
+      flex-basis: 50%;
+    }
+
+    &__media {
+      min-width: 320px;
+      min-height: 514px;
+      width: 631px;
+      height: 514px;
+      background: transparent url('/assets/images/cat.jpg') center/140% no-repeat;
+    }
+
+    &__body {
+      padding: 
+        clamp(3rem, $body-top-padding, 65px)
+        clamp(1rem, $body-right-padding, 65px)
+        clamp(1rem, $body-bottom-padding, 50px)
+        clamp(2rem, $body-left-padding, 85px);
+      width: 100%;
+      margin: 57px 0 0 -57px;
+    }
+
+    button {
+      width: auto;
+    }
+  }
+}
+
+// ≥992px Harold's mid 2012 13" Macbook Air aka "Ol' Reliable"
 @include media-breakpoint-up(lg) {}
 
-// ≥1200px
-@include media-breakpoint-up(xl) {}
+// ≥1200px "desktop"
+@include media-breakpoint-up(xl) {
+}
 
-// ≥1400px
-@include media-breakpoint-up(xxl) {}
+// ≥1400px "large desktop"
+@include media-breakpoint-up(xxl) {
+  .animal {
+    &__body {
+      max-height: 556px;
+    }
+  }
+}
