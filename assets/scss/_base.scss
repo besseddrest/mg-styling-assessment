@@ -28,6 +28,7 @@
     min-height: 51px;
     padding: 8px 40px;
     font-size: 16px;
+    line-height: 19px;
     border-radius: 0;
     letter-spacing: -0.32px;
   }
@@ -76,8 +77,8 @@
     }
 
     p {
-      font-size: clamp(16px, $font-size-clamp, 22px);
-      line-height: clamp(24px, $line-height-clamp, 34px);
+      font-size: clamp(16px, $body-copy-size, 22px);
+      line-height: clamp(24px, $body-copy-line-height, 34px);
     }
   }
 

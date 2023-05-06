@@ -4,10 +4,13 @@ $theme-colors: map-merge($theme-colors, (
   "primary": $primary
 ));
 
-// Expressions used in clamp()
+// To help me with these calcs, I created a quick form 
+// that would generate the expression used with CSS clamp()
+// based on this article: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
+// check it out on github - https://github.com/besseddrest/utils/tree/master/clamp
 $gutter-padding: calc(-3.3344rem + 9.0301vw);
-$font-size-clamp: calc(0.5184rem + 1.0033vw);
-$line-height-clamp: calc(0.6973rem + 1.6722vw);
+$body-copy-size: calc(0.5184rem + 1.0033vw);
+$body-copy-line-height: calc(0.6973rem + 1.6722vw);
 $body-top-padding: calc(1.6355rem + 2.8428vw);
 $body-right-padding: calc(-0.6488rem + 5.5184vw);
 $body-bottom-padding: calc(0.5552rem + 3.0100vw);
@@ -15,8 +18,3 @@ $body-left-padding: calc(-2.2542rem + 8.8629vw);
 $content-gutter-padding: calc(-2.1154rem + 8.6538vw);
 $animal-image-height-up: calc(18.3390rem + 16.2207vw);
 $animal-image-height-mobile: calc(11.4136rem + 33.5570vw);
-// Notes on calculating responsive linear font size:
-// https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
-// slope = (maxFontSize - minFontSize) / (maxWidth - minWidth)
-// yAxisIntersection = -minWidth * slope + minFontSize
-// preferredValue = yAxisIntersection[rem] + (slope * 100)[vw]
