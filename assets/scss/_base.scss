@@ -79,6 +79,7 @@
     p {
       font-size: clamp(16px, $body-copy-size, 22px);
       line-height: clamp(24px, $body-copy-line-height, 34px);
+      margin-bottom: 25px;
     }
   }
 
