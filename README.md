@@ -1,6 +1,12 @@
 Mindgruve Styling Assessment
 ============================
 
+# Notes fr. Harold
+- First, thank you for this exercise, I appreciate it when the technical assessment is actually in line with the role
+- I approached this as if the design was just a secondary component & part of a larger page of content, which I hope explains the use of `<h2>`, selectors like `[class*="__card"]`, and the overall hierarchy of the SCSS
+- BEM methodology for CSS class names
+- I made a rough UI tool to help me with some responsive calculations - see notes in `mg-variables` partial
+
 # The Ask
 
 Using your frontend skills and the [Adobe XD link](https://xd.adobe.com/view/7388adbd-4731-4dc9-a402-37bf323ac95d-26db/specs/) provided, produce a "pixel perfect" responsive mockup of the web comp.  A mobile comp is not included so we'll leave that to you.
