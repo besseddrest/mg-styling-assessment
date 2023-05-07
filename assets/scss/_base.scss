@@ -6,7 +6,7 @@
   padding: 25px 1rem;
 }
 
-// not a typical horizontal `card`, but very `card-ish`
+// it's pretty similar to a horizontal card, let's just call it a card
 // assuming there can be different cards... e.g. `human__card`, `robot__card`
 [class*="__card"] {
   h2 {
@@ -67,19 +67,20 @@
 // ≥768px "tablet"
 @include media-breakpoint-up(md) {
   .content {
-    padding: 25px clamp(16px, $gutter-padding, 70px)
+    padding: 25px clamp(16px, $gutter-padding, 70px);
   }
 
   [class*="__card"] {
     h2 {
       font-size: 36px;
       line-height: 39px;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: clamp(16px, $body-copy-size, 22px);
       line-height: clamp(24px, $body-copy-line-height, 34px);
-      margin-bottom: 25px;
+      margin-bottom: 22px;
     }
   }
 
@@ -88,19 +89,18 @@
 
     &__media {
       flex-basis: 631px;
-      min-height: none;
       height: clamp(440px, $animal-image-height-up, 515px);
-      background: transparent url('/assets/images/cat.jpg') center/140% no-repeat;
+      background: transparent url('/assets/images/cat.jpg') 40% 44%/139% no-repeat;
     }
 
     &__body {
       flex-basis: 653px;
       width: 100%;
       max-height: 556px;
-      margin: 57px 0 0 -57px;
+      margin: 59px 0 0 -57px;
       padding: 
-        clamp(3rem, $body-top-padding, 65px)
-        clamp(1rem, $body-right-padding, 65px)
+        clamp(3rem, $body-top-padding, 69px)
+        clamp(1rem, $body-right-padding, 66px)
         clamp(2rem, $body-bottom-padding, 50px)
         clamp(2rem, $body-left-padding, 85px);
     }
