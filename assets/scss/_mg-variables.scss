@@ -8,13 +8,12 @@ $theme-colors: map-merge($theme-colors, (
 // that would generate the expression used with CSS clamp()
 // based on this article: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
 // check it out on github - https://github.com/besseddrest/utils/tree/master/clamp
-$gutter-padding: calc(-3.3344rem + 9.0301vw);
-$body-copy-size: calc(0.5184rem + 1.0033vw);
-$body-copy-line-height: calc(0.6973rem + 1.6722vw);
+$gutter-padding: calc(-3.8722rem + 10.1504vw);
+$body-copy-size: calc(0.4586rem + 1.1278vw);
+$body-copy-line-height: calc(0.5977rem + 1.8797vw);
 $body-top-padding: calc(1.1053rem + 3.9474vw);
 $body-right-padding: calc(-3.5113rem + 9.3985vw);
 $body-bottom-padding: calc(0.3759rem + 3.3835vw);
 $body-left-padding: calc(-2.7820rem + 9.9624vw);
-$content-gutter-padding: calc(-2.1154rem + 8.6538vw);
 $animal-image-height-up: calc(18.3390rem + 16.2207vw);
 $animal-image-height-mobile: calc(11.4136rem + 33.5570vw);
