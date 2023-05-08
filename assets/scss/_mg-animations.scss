@@ -1,0 +1,21 @@
+@keyframes mg-translate-fade-top-left {
+  from { 
+    transform: translate(-100%, -100%);
+    opacity: 0;
+  }
+  to { 
+    transform: translate(0, 0); 
+    opacity: 1;
+  }
+}
+
+@keyframes mg-translate-fade-bottom-right {
+  from { 
+    transform: translate(100%, 100%);
+    opacity: 0;
+  }
+  to { 
+    transform: translate(0, 0); 
+    opacity: 1;
+  }
+}

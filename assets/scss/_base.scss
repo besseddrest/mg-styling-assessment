@@ -1,9 +1,16 @@
 // begin styling here.
+body {
+  background-color: lightgrey; // for gutter visibility
+}
+
 .content {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   max-width: 1366px;
   width: 100%;
-  padding: 25px 1rem;
+  padding: 2rem 1rem;
+  background-color: white; // for gutter visibility
+  height: 100%;
+  overflow: hidden;
 }
 
 // it's pretty similar to a horizontal card, let's just call it a card
@@ -44,6 +51,9 @@
     background: transparent url('/assets/images/cat.jpg') center no-repeat;
     background-size: cover;
     z-index: 1;
+    transform: translate(0, 0);
+    opacity: 0;
+    @include animate-in(mg-translate-fade-top-left);
   }
 
   &__body {
@@ -52,9 +62,21 @@
     background: white;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.16);
     z-index: 2;
+    transform: translate(0, 0);
+    opacity: 0;
+    @include animate-in(mg-translate-fade-bottom-right);
 
     h2, p {
       margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .animal {
+    &__media, &__body {
+      animation: none;
+      opacity: 1;
     }
   }
 }
@@ -68,7 +90,7 @@
 // ≥768px "tablet"
 @include media-breakpoint-up(md) {
   .content {
-    padding: 25px clamp(16px, $gutter-padding, 70px);
+    padding: 2rem clamp(16px, $gutter-padding, 70px);
   }
 
   [class*="__card"] {

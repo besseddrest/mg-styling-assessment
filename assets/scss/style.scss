@@ -3,8 +3,10 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
-// variable overrides
+// vars, animations, mixins
 @import "./mg-variables";
+@import "./mg-animations";
+@import "./mg-mixins";
 
 // import the rest of bootstrap to set overrides
 @import "bootstrap";

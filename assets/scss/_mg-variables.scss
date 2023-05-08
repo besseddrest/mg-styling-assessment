@@ -4,10 +4,7 @@ $theme-colors: map-merge($theme-colors, (
   "primary": $primary
 ));
 
-// To help me with these calcs, I created a quick form 
-// that would generate the expression used with CSS clamp()
-// based on this article: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
-// check it out on github - https://github.com/besseddrest/utils/tree/master/clamp
+// Expressions used in `clamp()`
 $gutter-padding: calc(-3.8722rem + 10.1504vw);
 $body-copy-size: calc(0.4586rem + 1.1278vw);
 $body-copy-line-height: calc(0.5977rem + 1.8797vw);

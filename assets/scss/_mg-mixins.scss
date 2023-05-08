@@ -1,0 +1,7 @@
+@mixin animate-in($name) {
+  animation-name: $name;
+  animation-duration: .25s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+}

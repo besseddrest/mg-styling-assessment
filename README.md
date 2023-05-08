@@ -2,10 +2,11 @@ Mindgruve Styling Assessment
 ============================
 
 # Notes fr. Harold
-- Thank you for this exercise, I appreciate it when the technical assessment is actually in line with the role
+- Thank you for this exercise; I appreciate it when the technical assessment is actually in line with the role
 - I approached this as if the design was just a secondary component & part of a larger page of content, which I hope explains the use of `<h2>`, selectors like `[class*="__card"]`, and the overall hierarchy of the SCSS
 - BEM methodology for CSS class names
-- I made a rough UI tool to help me with some responsive calculations - see notes in `mg-variables` partial
+- I made a [rough UI tool](https://github.com/besseddrest/utils/tree/master/) to help me with some responsive calculations - `mg-variables` partial. Based on [this article](https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case).
+- To check for accessibility I used the Chrome extension [axe Devtools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 
 # The Ask
 
