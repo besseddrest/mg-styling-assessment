@@ -8,6 +8,9 @@ Mindgruve Styling Assessment
 - I made a [rough UI tool](https://github.com/besseddrest/utils/tree/master/) to help me with some responsive calculations - `mg-variables` partial. Based on [this article](https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case).
 - To check for accessibility I used the Chrome extension [axe Devtools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 
+## Screenshot
+![Style Assessment Screenshot](./screenshot.png?raw=true "Screenshot")
+
 # The Ask
 
 Using your frontend skills and the [Adobe XD link](https://xd.adobe.com/view/7388adbd-4731-4dc9-a402-37bf323ac95d-26db/specs/) provided, produce a "pixel perfect" responsive mockup of the web comp.  A mobile comp is not included so we'll leave that to you.
